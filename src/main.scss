@@ -1,3 +1,26 @@
+@import "./partials/footer/footer.scss";
+
 body * {
-  outline: 1px solid lightgrey;
+  //outline: 1px solid lightgrey;
+}
+.contaiter{
+  width: 960px;
+  margin: 0 auto;
+}
+.my-foto{
+  padding-bottom: 50px;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 0;
+  } 
+  &__header .name{
+    font-size: 24px;
+    font-weight: 800;
+  }
+  &__header .languare{
+    font-size: 24px;
+    font-weight: 900;
+  }
 }

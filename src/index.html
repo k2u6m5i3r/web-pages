@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +8,24 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <h1>Test Work</h1>
+    <div class="contaiter">
+      @@include('./partials/header/_header.html',{})
+      <hr>
+      <main class="my-foto">
+        <div class="my-foto__header">
+          <div class="my-foto__header name">Leviy Matvey</div>
+          <div class="my-foto__header description">25 лет, Гомель</div>
+          <div class="my-foto__header languare">ru</div>
+        </div>
+        <div class="my-foto__img">
+          <img src="./img/image_my_fote.jpg" alt="">
+        </div>
+      </main>
+      <main class="about-me"></main>
+      <main class="sdr-tx"></main>
+      <main class="sdr-link"></main>
+      @@include('./partials/footer/_footer.html',{})      
+    </div>
+
   </body>
 </html>

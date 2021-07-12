@@ -1,0 +1,23 @@
+.footer{
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    &__titel{
+        padding: 20px;
+        font-size: 24px;
+        font-weight: 800;
+    }
+    &__losung{
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &__social{
+        padding: 20px;
+    }
+    &__location{
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
