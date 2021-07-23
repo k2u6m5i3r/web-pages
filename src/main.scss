@@ -37,9 +37,9 @@ body * {
     // font-weight: 900;
   }
   &__img{
-    background-image: url("./img/logo_my_photo.jpg");
+    background-image: url("./img/OpenWebRX-2.jpg");
     background-repeat: no-repeat;
-    height: 390px;
+    height: 510px;
     width: 100%;
   }
 }
@@ -77,9 +77,14 @@ body * {
 .portfolio{
   background: #F6F6F6;
   text-align: center;
+  
   padding: 100px 0;
 &__titel{
   font-size: 34px;
+}
+&__articels{
+  text-decoration:none;
+  color: #070707;
 }
 }
 @media screen and (max-width: 600px) {

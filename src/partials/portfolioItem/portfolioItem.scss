@@ -1,10 +1,17 @@
-
+.portfolioItem a{
+  
+}
 .portfolioItem{
+  color:#000;
+  text-decoration:none;
+
   &__titel{
+    list-style: none;
     padding: 20px;
     font-size: 34px;
   }
   &__description{
+    list-style: none;
     font-size: 18px;
   }
   &__img img{
