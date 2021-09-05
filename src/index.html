@@ -4,10 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./main.scss">
+    
     <title>First project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <h1>Test Work</h1>
+    
+    <div class="wrapper">
+      <header class="header">
+        <div class="menu container ">
+          <div class="menu__logo">
+            <img src="./img/logo.png" alt="" srcset="">
+          </div>
+          <div class="menu__nav">
+            <ul>
+              <li> <a href="">Почему мы?</a> </li>
+              <li> <a href="">Туры</a> </li>
+              <li> <a href="">Отзовы</a> </li>
+              <li> <a href="">Оставить заявку</a> </li>
+            </ul>
+          </div>
+        </div>
+        <main class="banner container">
+          <div class="banner__titel text-position">
+            <h1>Туры в солнечную Грузию</h1>
+          </div>
+          <div class="banner__subtitel text-position">
+            <h2>Горнолыжные курорты. Экскурсионные туры. Винные туры</h2>
+          </div>
+          <div class="banner__btn">
+            <input class="btn" type="button" value="получить консультацию">
+          </div>
+          <div class="banner__nav"></div>
+        </main>
+      </header>
+
+      <main class="doverie container">
+        <div class="doverie__titel text-position"><h3 class="text-color-titel text-size-two">Почему нам можно доверять?</h3></div>
+        <div class="doverie__items">
+          <div class="tre-column">
+            <div class="tre-column__img">
+
+            </div>
+            <div class="tre-column__titel">Официальный договор</div>
+            <div class="tre-column__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint susci</div>
+          </div>
+          <div class="tre-column">
+            <div class="tre-column__img">
+
+            </div>
+            <div class="tre-column__titel">Официальный договор</div>
+            <div class="tre-column__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint susci</div>
+          </div>
+          <div class="tre-column">
+            <div class="tre-column__img">
+
+            </div>
+            <div class="tre-column__titel">Официальный договор</div>
+            <div class="tre-column__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint susci</div>
+          </div>
+        </div>
+        <div class="doverie__content">
+          <div class="content__discription text-color-titel">
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quos qui! Dolorem maiores dolor ipsum perspiciatis dolorum officiis dignissimos ex cum cupiditate quis ut quisquam, pariatur veritatis at architecto excepturi.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deserunt iure. Corrupti beatae ducimus atque temporibus non ad fuga id eius asperiores tenetur. Adipisci laudantium itaque, nisi illum voluptatem autem?</p>
+          </div>
+          <div class="content__img">
+            <img src="./img/ofis.jpg" alt="изображение офиса">
+          </div>
+        </div>
+      </main>
+      <main class="typesTur container">
+        <div class="typesTur__titel text-position">
+          <h3 class="text-color-titel text-size-two">Вас приятно удивит разнообразие</h3>
+        </div>
+        <!-- партшал -->
+        <div class="typesTur__name">
+          @@include('./partials/subTypesTur/_subTypesTur.html',{"icon":"sky","description":"Горнолыжные курорты Грузии"})
+        </div>
+        <div class="typesTur__img">
+          <img src="./img/content/1.jpg" alt="">
+          <img src="./img/content/2.jpg" alt="">
+          <img src="./img/content/3.jpg" alt="">
+        </div>
+        <div class="typesTur__name">
+          @@include('./partials/subTypesTur/_subTypesTur.html',{"icon":"tur","description":"Экскурсионные туры Грузии"})
+        </div>
+        <div class="typesTur__img">
+          <img src="./img/content/4.jpg" alt="">
+          <img src="./img/content/5.jpg" alt="">
+          <img src="./img/content/3.jpg" alt="">
+        </div>        <div class="typesTur__name">
+          @@include('./partials/subTypesTur/_subTypesTur.html',{"icon":"wine","description":"Винные туры Грузии"})
+        </div>
+        <div class="typesTur__img">
+          <img src="./img/content/5.jpg" alt="">
+          <img src="./img/content/6.jpg" alt="">
+          <img src="./img/content/1.jpg" alt="">
+        </div>        
+        
+      </main>
+
+      <main class="messages container">
+        <div class="messages__titel text-position">
+          <h3 class="text-color-titel text-size-two">
+          Отзовы довольных клиетнтов
+          </h3>
+      </div>
+        <div class="messages__slider">
+                    <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                @@include('./partials/slider/_slider.html',{'persImg':'./img/Pers_1.png','presName':'Ирина Маркова','persStad':'г. Москва', 'persContent':'Lorem text'})
+              </div>
+              <div class="swiper-slide">
+                @@include('./partials/slider/_slider.html',{'persImg':'./img/Pers_1.png','presName':'Светлана Маркова','persStad':'г. Сочи', 'persContent':'Lorem text'})
+              </div>
+              <div class="swiper-slide">
+                @@include('./partials/slider/_slider.html',{'persImg':'./img/Pers_1.png','presName':'Наталья Маркова','persStad':'г. Владивосток', 'persContent':'Lorem text'})
+              </div>
+              
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+
+          
+        </div>
+      </main>
+      <main class="info container">
+        <div class="info__titel text-position">
+          <h3 class="text-color-titel text-size-two">Как получить больше информации?</h3>
+        </div>
+        <div class="info__content">
+          <div class="info__map">Посетить наш офис</div>
+          <div class="info__form">обратная форма</div>
+        </div>
+      </main>
+      <footer class="footer ">
+        <div class="container">
+          <div class="footer__content">
+            <div class="left__column">2021 "Туры в грузию"</div>
+            <div class="right__column">Разработка Wunder49</div>
+          </div>
+        </div>   
+      </footer>
+      
+    </div>
   </body>
 </html>

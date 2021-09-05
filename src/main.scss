@@ -1,3 +1,150 @@
+@import './partials/subTypesTur/subTypesTur.scss';
+@import './partials/slider/slider.scss';
+@import './spriteIcon.scss';
+
 body * {
-  outline: 1px solid lightgrey;
+  // outline: 1px solid lightgrey;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+.wrapper{
+  background-color: #FCEFDC;
+  width: 1024px;
+  margin: 0 auto;
+}
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+.text-position{
+  text-align: center;
+}
+.text-color-titel{
+  color: grey;
+}
+.text-size-one{
+  font-size: 2rem;
+}
+.text-size-two{
+  font-size: 2.5rem;
+}
+.messages{
+
+}
+.header{
+  height: 400px;
+  background-image: url('./img/header-bg.jpg');
+  background-size: 100% 100%;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    list-style-type: none; /* Убираем маркеры */
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    a{
+      text-decoration: none;
+      color: wheat;
+    }
+   }
+   a:hover{
+     border-bottom: 3px solid tan;
+   }
+   ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+  
+}
+.banner{
+  
+  &__btn{
+    position: relative;
+  }
+  .btn{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 70%) 
+  }
+}
+input{
+  padding: 15px;
+  background-color: #0FAE9A;
+  border-bottom: 5px solid #0C7A6C;
+}
+.doverie{
+  &__titel{
+
+  }
+  &__items{
+    display: flex;
+    
+    .tre-column{
+      margin: 10px;
+
+      height: 240px;
+
+      background-image: url('./img/radius.png');
+      background-size: 100% 100%;
+    }
+  }
+
+  .doverie__content{
+    display: flex;
+
+  }
+
+}
+.content__discription{
+  
+  margin-right: 30px;
+}
+.info__content{
+  display: flex;
+}
+.typesTur{
+  &__img{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+  }
+  &__img img{
+    width: 30%;
+    padding: 0px 5px;
+  }
+}
+
+.footer{
+  height: 100px;
+  background-image: url('./img/footer-bg.jpg');
+  background-size: 100% 100%;
+  &__content{
+    height: 100%;
+    
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container{
+    height: 100%;
+  }
+}
+.swiper{
+  height: 300px;
+  width: 100%;
+  .swiper-button-prev{
+    // opacity: 1;
+    // background-image: url('./img/footer-bg.jpg');
+  }
+  .swiper-button-prev::after{
+    content: "";
+    background-image: url('./img/arrow-left.png');
+  }
 }

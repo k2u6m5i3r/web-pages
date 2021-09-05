@@ -1,0 +1,18 @@
+.sprite{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+}
+.sky {
+    //width: 38px; height: 50px;
+    background: url('./img/css_sprites.png') -10px -10px;
+}
+.tur {
+    // width: 37px; height: 33px;
+    background: url('./img/css_sprites.png') -118px -2px;
+}
+.wine {
+    // width: 37px; height: 49px;
+    background: url('./img/css_sprites.png') -68px -10px;
+}

@@ -1,0 +1,10 @@
+.subTypesTur{
+    display: flex;
+    align-items: center;
+    &__icon{
+        padding: 0px 10px 0px 0px ;
+    }
+    &__description{
+        padding: 0px 5px;
+    }
+}

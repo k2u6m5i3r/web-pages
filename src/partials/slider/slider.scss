@@ -1,0 +1,25 @@
+.slid{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    
+    &__img{
+        
+    }
+    &__content{
+        margin-left: 35px;
+        .infoPerson{
+            
+            &__name{
+
+            }
+            &__stadt{
+                text-transform: italic;
+            }
+            &__content{
+
+            }
+        }
+
+    } 
+}
