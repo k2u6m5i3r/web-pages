@@ -134,6 +134,7 @@ html,body{
 .page__whoweare{
 }
 .page__clients {
+  margin: 0px 0px 10px 0px;
 }
 .page__subscribe {
 }
@@ -648,6 +649,12 @@ html,body{
 }
 
 .subscribe__body {
+  margin: 0px 30px;
+  display: flex;
+  padding: 50px 30px;
+  align-items: center;
+  background: #17213c;
+  border-radius: 2px;
 }
 .subscribe__titel {
 }
@@ -656,4 +663,5 @@ html,body{
 .subscribe__input {
 }
 .subscribe__button {
+  
 }
