@@ -870,13 +870,20 @@ html,body{
 }
 .contact__container {
 }
-.contact__body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .contact__content {
+  padding: 0px 0px 20px 0px ;
 }
+@media (min-width: 767px){
+  .contact__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact__content {
+    padding: 0px 20px 0px 0px ;
+  }
+}
+
 .contact__titel {
   font-weight: 700;
   letter-spacing: 0.1px;
@@ -906,4 +913,52 @@ html,body{
 .contact__button:hover{
   background-color: #aa5330;
   color: #ffffff;
+}
+
+//------------------------------
+.footer {
+}
+.footer__top {
+}
+.footer__main {
+}
+._container {
+}
+.footer__column {
+}
+.footer__label {
+}
+.footer__menu {
+}
+.menu-footer {
+}
+.menu-footer__list {
+}
+.menu-footer__item {
+}
+.menu-footer__link {
+}
+.footer__contacts {
+}
+.contacts-footer {
+}
+.contacts-footer__item {
+}
+.contacts-footer__item_phone {
+}
+.contacts-footer__item_map {
+}
+.contacts-footer__item_email {
+}
+.footer__bottom {
+}
+.footer__container {
+}
+.footer__copy {
+}
+.footer__social {
+}
+.social {
+}
+.social__item {
 }
