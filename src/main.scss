@@ -63,8 +63,11 @@ html,body{
   left: 0;
   top: 0;
   z-index: 50;
+  background-color: #75757599;
+  //background-color: #FF7B4788;
 }
 .header__container{
+  
   display: flex;
   min-height: 104px;
   align-items: center;
@@ -110,8 +113,9 @@ html,body{
   margin: 0px 21px 0px 0px;
 }
 .menu__link{
-  color: #737373;
+  color: #ffffff;
   font-weight: 600;
+  font-size: 20px;
   line-height: calc(24 / 14 * 100%);
 }
 .menu__link:hover{
@@ -119,7 +123,7 @@ html,body{
 }
 @media( max-width: 479px ){
   .menu__link{
-      font-size: 18px;
+      font-size: 16px;
   }
 }
 /* БЭМ блоки на странице*/
@@ -131,19 +135,24 @@ html,body{
   z-index: 2;
 }
 .page__advantages {
+  display: none;
 }
 .page__practice {
 }
 .page__whoweare{
 }
 .page__clients {
+  display: none;
   margin: 0px 0px 10px 0px;
 }
 .page__subscribe {
+  display: none;
 }
 .page__getintouch {
+  display: none;
 }
 .page__contact {
+  display: none;
 }
 /*общий блок заголовков*/
 .header-block{ 
@@ -203,8 +212,8 @@ html,body{
   letter-spacing: 0.2px;
 }
 .main-block__text{
-    color: #737373;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 26px;
     line-height: calc(30 /20 * 100%);
 }
 // @media (max-width:479px){
@@ -242,19 +251,19 @@ html,body{
   //margin-right:10px;
 }
 .main-block__buttan_orange{
-  background: #ff7b47;
+  background: #757575f0;
   color: #ffffff;
 }
 .main-block__buttan_orange:hover{
   background-color: #ffffff;
-  color: #FF7B47;
+  color: #757575f0;;
 }
 .main-block__buttan_border{
-  color: #0d5c63;
-  border: 1px solid #0d5c63;
+  color: #75757599;
+  border: 1px solid #75757530;
 }
 .main-block__buttan_border:hover{
-  background-color: #0d5c63;
+  background-color: #757575f0;
   color: #ffffff;
 }
 .main-block__img{
@@ -271,7 +280,7 @@ html,body{
 }
 @media (max-width: 768px) {
   .main-block__img{
-      opacity: 0.2;
+      opacity: 0.9;
   }
 }
 /* подвал*/
@@ -936,6 +945,7 @@ html,body{
 .footer {
 }
 .footer__top {
+  display: none;
   background: #17213c;
   padding: 35px 0;
 }
