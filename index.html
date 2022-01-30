@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточки</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            /* font google */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            background-color: whitesmoke;
+        }
+        header{
+            background-color: white;
+        }
+        button {
+            padding: 8px;
+            outline: none;
+            cursor: pointer;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            background-color: whitesmoke;
+        }
+        button:hover{
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .container{
+            width: 95%;
+            margin: auto;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+            padding: 10px;
+            background-color: white;
+        }
+        .menu-buttons{
+            display: flex;
+        }
+        .menu-buttons button{
+            align-items: center;
+            margin: 5px;
+        }
+        .menu button{
+            font-family: inherit;
+        }
+        .create-box{
+            width: 380px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        }
+        .create-box-titel{
+            text-align: center; 
+            color: black;
+        }
+        .create-box textarea{
+            width: 100%;;
+            border-radius: 5px;
+            font-family: inherit;
+            border: 1px solid lightgray;
+        }
+        .create-box button{
+            width: fit-content;
+        }
+        .flashcards{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+        .flashcard{
+            width: 370px;
+            height: 200px;
+            word-wrap: break-word;
+            margin: 10px;
+            background-color: white;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        }
+        .flashcard h2{
+            font-size: 1rem;
+        }
+        @media(max-width:1280px){
+            .container{width: 100%;}
+        }
+        @media(max-width:768px){
+        .flashcard{margin: auto;}
+            .flashcard{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        @media(max-width:490px){
+            header{
+                padding: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu{
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div id="menu" class="menu">
+                <h1 id="menu-titel">Карточки</h1>
+                <div id="menu-buttons" class="menu-buttons btn">
+                    <button  id="btn-newCard">Новая карточка</button>
+                    <button  id="btn-delCard">Удалить все карточки</button>                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="create-box">
+            <h2 id="create-box-titel">Создать карточку</h2>
+            <label for="question">Задание</label>
+            <br>
+            <textarea id="question" maxlength="280"></textarea>
+            <br>
+            <label for="answer" maxlength="280">Описание</label>
+            <br>
+            <textarea id="answer"></textarea>
+            <div id="create-box-btn" class="create-box-btn btn" >
+                <button id="btn-addNewCard">Сохранить</button>
+                <button id="btn-closeNewCard">Закрыть</button>
+            </div>
+        </div>
+        <div class="flashcards">
+
+        </div>
+    </div>
+    <script>
+        const flashcards = document.getElementsByClassName("flashcards")[0];
+        const createBox = document.getElementsByClassName("create-box")[0];
+        const question = document.getElementById("question");
+        const answer = document.getElementById("answer");
+        const btnNewCard = document.getElementById("btn-newCard");
+        const btnDelCards = document.getElementById("btn-delCard");
+        const btnAddNewCard = document.getElementById("btn-addNewCard");
+        const btnCloseNewCard = document.getElementById("btn-closeNewCard");
+        btnNewCard.addEventListener('click', showCreateCardBox);
+        btnDelCards.addEventListener('click',delFlashCards);
+        btnAddNewCard.addEventListener('click',addFlashCard);
+        btnCloseNewCard.addEventListener('click',hideCreateBox);
+        let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+        contentArray.forEach(divMaker);
+        function divMaker(text){
+            const div = document.createElement('div');
+            const question = document.createElement('h2');
+            const answer = document.createElement('h2');
+            div.className = "flashcard";
+            question.setAttribute('style', 'border-top: 1px solid red;padding:15px; margin-top: 30px ');
+            question.innerText = text.my_question;
+            answer.setAttribute('style', 'text-align:left; display:block; color:grey; padding-left:15px;');
+            answer.innerText = text.my_answer;
+            div.appendChild(question);
+            div.appendChild(answer);
+            flashcards.appendChild(div);
+        }
+        function addFlashCard(){
+            let flashCard_info = {
+                'my_question': question.value,
+                'my_answer': answer.value
+            }
+            contentArray.push(flashCard_info);
+            localStorage.setItem('items', JSON.stringify(contentArray));
+            divMaker(contentArray[contentArray.length - 1]);
+            question.value = '';
+            answer.value = '';
+        }
+        function delFlashCards(){
+            localStorage.clear();
+            flashcards.innerText = '';
+            contentArray = [];
+        }
+        function showCreateCardBox(){
+            createBox.style.display = "block";
+        }
+        function hideCreateBox(){
+            createBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
