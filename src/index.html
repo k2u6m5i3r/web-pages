@@ -3,45 +3,84 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- <link rel="stylesheet" href="./normalize.css"> -->
+    <link rel="stylesheet" href="./slick.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./main.css">
     <title>First project</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="./js/slick.js" defer></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <header  class="header">
-        <div  class="header__container">
-            <a href="" class="header__logo"><img src="img/logo.svg" alt="Логотип которого нет"></a>
-            <div class="header__menu menu">
-                <nav class="menu__body">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="" class="menu__link">HOME</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="" class="menu__link">FEATURES</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="" class="menu__link">SUPPORT</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#footer" class="menu__link">CONTACT US</a>
-                        </li>
-                    </ul>                        
-                </nav>
-            </div>
-           <div class="header__buttom">
-                <a href="" class="button button_blue">DOWNLOAD</a>
-                <a href="#open" class="icon-menu"><span></span></a>
-                <a href="#close" class="close-icon-menu"></a>
-            </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a href="#" class="logoImg">
+              <img src="./img/logo.png" alt="logo">
+            </a>
+          </div>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#">home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">menu</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">reservations</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">story</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">block</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">contact</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="" class="header__to-book">
+            Block Now
+          </a>
         </div>
-      <main>
-        content
-      </main>
-      <footer class="footer">
-        Footer
-      </footer>
-    </div>
+      </div>
+    </header>
+    <section class="top">
+      <div class="top__inner">
+        <div class="top__suptitel">
+          sup titel
+        </div>
+        <div class="top__titel">
+          Lunch
+        </div>
+        <a href="#" class="top__link">
+          Discover Now
+        </a>        
+      </div>
+      <div class="top__slider">
+        <div class="top__item-1">
+          <div class="top__item-fon">
+
+          </div>
+        </div>
+        <div class="top__item-2">
+          <div class="top__item-fon">
+            
+          </div>
+        </div>
+        <div class="top__item-3">
+          <div class="top__item-fon">
+              
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
