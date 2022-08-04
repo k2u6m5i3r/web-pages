@@ -1,5 +1,7 @@
 //  index.js
+// получаю элемены для работы
 
+// END получаю элемены для работы
 // work for time&date
 const time = document.querySelector('.time');
 const dateBlock = document.querySelector('.date');
@@ -60,3 +62,20 @@ function getLocalStorage() {
 }
 window.addEventListener('load', getLocalStorage)
 // END приветствие
+
+
+// фоновое изображение замена
+let randomNum = 0;
+function getRandomNum(){
+  randomNum = Math.round(Math.random()*20);
+}
+console.log(randomNum);
+getRandomNum();
+
+console.log(randomNum);
+getRandomNum();
+
+console.log(randomNum);
+getRandomNum();
+console.log(randomNum);
+// END // фоновое изображение замена
