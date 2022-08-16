@@ -12,7 +12,13 @@ const slideNext = document.querySelector('.slide-next');
   // элкмент для слайдера предыдущий
 const slidePrev = document.querySelector('.slide-prev'); 
 
-// console.log(slidePrev);
+  // погода получаю элементы для работы
+const weatherCity = document.querySelector('.city');
+const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const weatherDescription = document.querySelector('.weather-description');
+
+
 
 function showTime() {
     const date = new Date();
@@ -78,8 +84,9 @@ let randomNum = 1;
 function getRandomNum(){
   randomNum = Math.ceil(Math.random()*20);
 }
+getRandomNum();
 function setBg(){
-  //https://github.com/rolling-scopes-school/stage1-tasks/blob/assets/images/night/03.jpg
+  
   //getRandomNum();//получаю случайное число
   let url = "url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/"+getTimeOfDay()+"/"+String(randomNum).padStart(2, "0")+".jpg')";
   bg.style.backgroundImage = url;
@@ -111,3 +118,22 @@ slidePrev.addEventListener('click', getSlidePrev);
 
 // END // фоновое изображение замена
 
+// работа с погодой
+async function getWeather() {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${weatherCity.value}&lang=ru&appid=08f2a575dda978b9c539199e54df03b0&units=metric`;
+  const res = await fetch(url);
+  const data = await res.json();
+  weatherIcon.className = 'weather-icon owf';
+  weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+  temperature.textContent = `${data.main.temp}°C`;
+  weatherDescription.textContent = data.weather[0].description;
+}
+getWeather();
+function setCity(event){
+  if (event.code === 'Enter') {
+    getWeather();
+    weatherCity.blur();
+  }
+}
+weatherCity.addEventListener('keypress',setCity );
+// END работа с погодой
