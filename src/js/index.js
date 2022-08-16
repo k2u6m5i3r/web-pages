@@ -83,7 +83,11 @@ function setBg(){
   //getRandomNum();//получаю случайное число
   let url = "url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/"+getTimeOfDay()+"/"+String(randomNum).padStart(2, "0")+".jpg')";
   bg.style.backgroundImage = url;
-
+  const img = new Image();
+  img.src = url; 
+  img.onload = () => {      
+    body.style.backgroundImage = `url(${url})`;
+  }; 
 }
 setBg();
 function getSlideNext(){
