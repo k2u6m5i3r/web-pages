@@ -6,7 +6,7 @@ function render() {
 }
 
 let CATALOG = [];
-fetch('/server/catalog.json')
+fetch('./server/catalog.json')
 // fetch('/server/catalog+.json')
     .then(result=> result.json())
     .then(ans =>{
