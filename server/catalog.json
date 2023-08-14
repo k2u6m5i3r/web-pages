@@ -1,0 +1,32 @@
+[
+    {
+        "id": "elem1",
+        "name": "Git 1",
+        "img": "./img/products-img.png",
+        "price": "450"
+    },
+    {
+        "id": "elem2",
+        "name": "Git 2",
+        "img": "./img/products-img.png",
+        "price": "1200"
+    },
+    {
+        "id": "elem3",
+        "name": "Git 3",
+        "img": "./img/products-img.png",
+        "price": "23000"
+    },
+    {
+        "id": "elem4",
+        "name": "Git 4",
+        "img": "./img/products-img.png",
+        "price": "1200"
+    },
+    {
+        "id": "elem5",
+        "name": "Git 5",
+        "img": "./img/products-img.png",
+        "price": "2300"
+    }
+]
